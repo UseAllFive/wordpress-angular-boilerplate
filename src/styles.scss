@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global scss to this file, and also import other style files */
+@import 'assets/scss/shared';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+html {
+  @include prefixer(font-smoothing, antialiased, webkit);
+  @include prefixer(osx-font-smoothing, grayscale, moz);
+  color: $black;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}

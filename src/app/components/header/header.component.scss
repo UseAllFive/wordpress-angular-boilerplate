@@ -1,0 +1,45 @@
+@import '../../../assets/scss/shared';
+
+.header {
+  background-color: $blue;
+  padding: $space;
+
+  @include grid-media($m) {
+    padding: $space-m;
+  }
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+  margin-bottom: $space-m;
+
+  @include grid-media($m) {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+
+.pages {
+  text-align: center;
+
+  @include grid-media($m) {
+    display: inline-block;
+    float: right;
+  }
+}
+
+.page {
+  border-bottom: 2px solid transparent;
+  color: $black;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 0 $space;
+
+  &:hover {
+    border-color: $black;
+  }
+}

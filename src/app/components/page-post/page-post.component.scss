@@ -1,0 +1,73 @@
+@import '../../../assets/scss/shared';
+
+.page {
+  min-height: calc(100vh - 150px - 106px - 60px - 60px);
+
+  @include grid-media($m) {
+    min-height: calc(100vh - 124px - 124px - 120px - 120px);
+  }
+}
+
+.inner {
+  @extend %inner;
+  @include padding($space-l null);
+
+  @include grid-media($m) {
+    @include padding(($space-l * 2 )null);
+  }
+}
+
+.back {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: $black;
+  text-decoration: none;
+  margin-bottom: $space-l;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-color: $black;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: $space-s;
+}
+
+.description {
+  font-weight: bold;
+  font-size: 32px;
+  width: 70%;
+  margin-left: auto;
+  margin-top: -$space-l;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+
+  &::after {
+    @include position(absolute, 0);
+    @include size(100%);
+    content: '';
+    background-color: rgba($white, 0.3);
+  }
+}
+
+.content-text {
+  background-color: $purple;
+
+  /deep/ p {
+    margin-top: $space;
+  }
+}
+
+.content-image {
+  width: 100%;
+  display: block;
+}

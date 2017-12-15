@@ -1,0 +1,11 @@
+<header class="header" *ngIf="content && content.acf">
+  <a class="logo" [routerLink]="['/']" [inlineSVG]="'/assets/images/ua5-logo.svg'"></a>
+  <div class="pages">
+    <a
+      *ngFor="let item of content.acf.pages"
+      class="page"
+      [routerLink]="['/' + item.page.post_name]"
+      [innerHTML]="item.page.post_title">
+    </a>
+  </div>
+</header>

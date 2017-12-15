@@ -1,28 +1,40 @@
-# WordpressAngularBoilerplate
+# Wordpress-Angular Boilerplate
+Develop Angular websites, powered by Wordpress CMS. Brought to you by the strategists, designers and developers of [Use All Five](http://useallfive.com).
+  
+## Installation
+  
+```sh
+git clone clone git@github.com:UseAllFive/wordpress-angular-boilerplate.git
+cd wordpress-angular-boilerplate
+npm install
+ng serve
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In your brower, you should now see boilerplate data being imported from the [Use All Five](http://useallfive.com) Demo Wordpress
 
-## Development server
+![figure](https://raw.githubusercontent.com/UseAllFive/wordpress-angular-boilerplate/master/src/assets/images/boilerplate.gif "Boilerplate demo") 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Wordpress Configuation
+After installing Wordpress, there are several plugins you'll need to install: 
+`ACF to REST API, Advanced Custom Fields, Advanced Custom Fields PRO`
 
-## Code scaffolding
+![figure](https://raw.githubusercontent.com/UseAllFive/wordpress-angular-boilerplate/master/src/assets/images/wp-plugins "Wordpress plugins") 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+The [Advanced Custom Fields Pro plugin](https://www.advancedcustomfields.com/) is a paid plugin that allows us to create flexible and repeating content for our layout-driven designs
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Angular Configuration
+We are using the [WP-API-Angular library](https://github.com/wordpress-clients/wp-api-angular) to import data from Wordpress (you can [see some of their examples here](https://plnkr.co/edit/hqE4bvbM6HXql5Insjx8?p=preview)
 
-## Running unit tests
+In your boilerplate Angular code, go to `app.module.ts` and replace `http://wp-playground.ua5.land` with your own Wordpress domain
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+And thats it! If your Wordpress & Advanced Custom Fields matches ours, this will work out of the box with your own Wordpress data coming through in the boilerplate template.
+You can add custom pages in `app-routing.module.ts`, and create your own `interfaces` to make your own Wordpress custom fields.
+  
+## Questions & Help
+If you have questions, feel free to open a github ticket or email us at hello@useallfive.com
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Advanced Custom Fields Plugin
+https://www.advancedcustomfields.com/
+Buy pro

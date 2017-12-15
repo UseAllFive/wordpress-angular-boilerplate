@@ -1,0 +1,28 @@
+@import '../../../assets/scss/shared';
+
+.page {
+  @extend %inner;
+  @include padding($space-l null);
+  min-height: calc(100vh - 150px - 106px - 60px - 60px);
+
+  @include grid-media($m) {
+    @include padding(($space-l * 2 )null);
+    min-height: calc(100vh - 124px - 124px - 120px - 120px);
+  }
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: $space;
+
+  @include grid-media($m) {
+    font-size: 60px;
+  }
+}
+
+.description {
+  text-align: center;
+  font-weight: normal;
+}

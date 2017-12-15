@@ -1,0 +1,5 @@
+<app-header [content]="header$ | async"></app-header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<app-footer [content]="footer$ | async"></app-footer>

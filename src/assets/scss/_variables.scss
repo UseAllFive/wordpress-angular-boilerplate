@@ -1,0 +1,34 @@
+$black: rgba(#000000, 0.7);
+$white: #ffffff;
+$purple: #B2B2BE;
+$blue: #A7D3D8;
+$coral: #E4B6A4;
+
+$space-s: 10px;
+$space: 20px;
+$space-m: 40px;
+$space-l: 60px;
+
+$max-width: 900px;
+
+$s: (
+  media: 576px, // min-width
+);
+
+$m: (
+  media: 768px, // min-width
+);
+
+$l: (
+  media: 992px, // min-width
+);
+
+$xl: (
+  media: 1200px, // min-width
+);
+
+%inner {
+  max-width: calc(#{$max-width} + (#{$space} * 2));
+  padding: 0 $space;
+  margin: auto;
+}

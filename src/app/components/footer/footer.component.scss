@@ -1,0 +1,23 @@
+@import '../../../assets/scss/shared';
+
+.footer {
+  background-color: $coral;
+  padding: $space;
+  text-align: center;
+  font-size: 18px;
+
+  @include grid-media($m) {
+    padding: $space-m;
+  }
+
+  /deep/ a {
+    color: $black;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-color: $black;
+    }
+  }
+}
